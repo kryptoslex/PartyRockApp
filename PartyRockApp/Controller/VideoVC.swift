@@ -7,12 +7,42 @@
 //
 
 import UIKit
+import WebKit
 
-class VideoVC: UIViewController {
+class VideoVC: UIViewController,WKUIDelegate {
 
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    private var _partyRock: PartyRock!
+    
+    var partyRock: PartyRock{
+        get{
+            return _partyRock
+        }set{
+            _partyRock = newValue
+        }
+    }
+    
+    
+    @IBAction func backBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webView.uiDelegate = self
+        titleLabel.text = partyRock.videoTitle
+        
+        let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.allowsInlineMediaPlayback = true
+        webConfiguration.mediaTypesRequiringUserActionForPlayback = []
+        
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        
+        webView.load(URLRequest.init(url: URL.init(string: partyRock.videoURL)!))
+        
         // Do any additional setup after loading the view.
     }
 

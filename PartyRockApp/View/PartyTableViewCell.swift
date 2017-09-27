@@ -34,7 +34,7 @@ class PartyTableViewCell: UITableViewCell {
         DispatchQueue.global().async {
             do{
                 let data = try Data.init(contentsOf: url!)
-                DispatchQueue.global().sync {
+                DispatchQueue.main.sync {
                     self.videoPreviewImage.image = UIImage.init(data: data)
                 }
             }catch {

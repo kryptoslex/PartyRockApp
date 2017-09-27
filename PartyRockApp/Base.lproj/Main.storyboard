@@ -165,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1J6-Wp-nev">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="234" width="414" height="269"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="269" id="NmX-oW-pif"/>
@@ -175,15 +175,45 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3D-2W-6Dp">
+                                <rect key="frame" x="0.0" y="156" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EnQ-n3-MBN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jV-ro-oRn">
+                                <rect key="frame" x="26" y="20" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Kxa-AR-Sq8"/>
+                                    <constraint firstAttribute="height" constant="30" id="QnO-5D-Wq2"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="vFY-zV-h2V" eventType="touchUpInside" id="jl6-v4-aXO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1J6-Wp-nev" firstAttribute="top" secondItem="OIt-IS-8OV" secondAttribute="top" constant="-20" id="0pd-Wq-Ag6"/>
+                            <constraint firstItem="1J6-Wp-nev" firstAttribute="top" secondItem="OIt-IS-8OV" secondAttribute="top" constant="214" id="0pd-Wq-Ag6"/>
+                            <constraint firstItem="u3D-2W-6Dp" firstAttribute="leading" secondItem="OIt-IS-8OV" secondAttribute="leading" id="1xw-Dw-wIM"/>
+                            <constraint firstItem="u3D-2W-6Dp" firstAttribute="trailing" secondItem="OIt-IS-8OV" secondAttribute="trailing" id="7b2-fB-D7b"/>
+                            <constraint firstItem="5jV-ro-oRn" firstAttribute="top" secondItem="OIt-IS-8OV" secondAttribute="top" id="9ZC-ms-nia"/>
+                            <constraint firstItem="u3D-2W-6Dp" firstAttribute="top" secondItem="OIt-IS-8OV" secondAttribute="top" constant="136" id="Jia-ua-fo3"/>
+                            <constraint firstItem="u3D-2W-6Dp" firstAttribute="centerX" secondItem="D2b-lL-tgZ" secondAttribute="centerX" id="RlS-N7-qOO"/>
                             <constraint firstItem="1J6-Wp-nev" firstAttribute="trailing" secondItem="OIt-IS-8OV" secondAttribute="trailing" id="ZAM-An-c40"/>
+                            <constraint firstItem="5jV-ro-oRn" firstAttribute="leading" secondItem="OIt-IS-8OV" secondAttribute="leading" constant="26" id="o9m-2N-Yp9"/>
                             <constraint firstItem="1J6-Wp-nev" firstAttribute="leading" secondItem="OIt-IS-8OV" secondAttribute="leading" id="sBg-vC-VUE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OIt-IS-8OV"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="u3D-2W-6Dp" id="fUj-MN-OKy"/>
+                        <outlet property="webView" destination="1J6-Wp-nev" id="LNY-dm-9gD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHU-Vz-j0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
