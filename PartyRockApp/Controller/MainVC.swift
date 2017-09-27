@@ -30,6 +30,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         partyRockArray.append(p1)
         partyRockArray.append(p2)
+        partyRockArray.append(p3)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
