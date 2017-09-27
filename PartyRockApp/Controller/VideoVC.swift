@@ -34,16 +34,14 @@ class VideoVC: UIViewController,WKUIDelegate {
 
         webView.uiDelegate = self
         titleLabel.text = partyRock.videoTitle
+   
+        webView.configuration.allowsInlineMediaPlayback = true
+        webView.configuration.mediaTypesRequiringUserActionForPlayback = .all
+
+        let html = "<video playsinline controls width=\"100%\" src=\"\(partyRock.videoURL)\"> </video>"
+        self.webView.loadHTMLString(html, baseURL: nil)
+         webView.load(URLRequest.init(url: URL.init(string: partyRock.videoURL)!))
         
-        let webConfiguration = WKWebViewConfiguration()
-        webConfiguration.allowsInlineMediaPlayback = true
-        webConfiguration.mediaTypesRequiringUserActionForPlayback = []
-        
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        
-        webView.load(URLRequest.init(url: URL.init(string: partyRock.videoURL)!))
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

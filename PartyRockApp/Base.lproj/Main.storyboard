@@ -170,8 +170,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="269" id="NmX-oW-pif"/>
                                 </constraints>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
@@ -212,7 +212,7 @@
                     </view>
                     <connections>
                         <outlet property="titleLabel" destination="u3D-2W-6Dp" id="fUj-MN-OKy"/>
-                        <outlet property="webView" destination="1J6-Wp-nev" id="LNY-dm-9gD"/>
+                        <outlet property="webView" destination="1J6-Wp-nev" id="e5Q-e6-35q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHU-Vz-j0m" userLabel="First Responder" sceneMemberID="firstResponder"/>

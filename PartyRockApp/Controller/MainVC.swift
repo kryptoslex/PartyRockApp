@@ -24,12 +24,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let p1 = PartyRock.init(imageURL: "http://www.mtv.co.uk/sites/default/files/styles/image-w-520-h-292-scale-crop/public/mtv_uk/galleries/large/2016/01/18/all_time_low_hopeless_jw_555.jpeg?itok=9QRspEh7", videoURL: "https://youtu.be/LmnP0orCuE8", videoTitle: "Somewhere in never land")
         
+        let p2 = PartyRock.init(imageURL: "https://www.berklee.edu/sites/default/files/news/677/LizPortraitByDoor2.png", videoURL: "https://youtu.be/NyIqy5slDYw", videoTitle: "When youve got trouble")
+        
+        let p3 = PartyRock.init(imageURL: "https://www.berklee.edu/sites/default/files/news/677/LizPortraitByDoor2.png", videoURL: "https://youtu.be/KTo5GgTRc9s", videoTitle: "Pieces")
+        
         partyRockArray.append(p1)
-        partyRockArray.append(p1)
-        partyRockArray.append(p1)
-        partyRockArray.append(p1)
-        partyRockArray.append(p1)
-        partyRockArray.append(p1)
+        partyRockArray.append(p2)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
